@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Runner's High Hormone Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <main class="container">
+    <h1>Runner's High Hormone Simulator</h1>
+    <p class="subtitle">
+      러너스 하이 관련 호르몬 변화를 직접 측정하지 않고 시뮬레이션하는 연구 도구
+    </p>
+
+    <section class="card">
+      <label>운동 시간: <span id="durationValue">30</span>분</label>
+      <input type="range" id="duration" min="10" max="60" value="30" />
+
+      <label>운동 강도</label>
+      <select id="intensity">
+        <option value="0.8">낮음</option>
+        <option value="1.0" selected>중간</option>
+        <option value="1.2">높음</option>
+      </select>
+
+      <button onclick="runSimulation()">시뮬레이션 실행</button>
+    </section>
+
+    <section class="card">
+      <canvas id="hormoneChart"></canvas>
+    </section>
+
+    <section class="card result">
+      <h2>분석 결과</h2>
+      <p id="bestTime"></p>
+      <p id="interpretation"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
