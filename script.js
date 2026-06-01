@@ -61,8 +61,7 @@ function runSimulation() {
   const bestTime = time[bestIndex];
 
   document.getElementById("bestTime").textContent =
-    `Runner's High Score가 가장 높은 시점은 운동 시작 후 약 ${bestTime}분입니다.`;
-
+  `심박수 기준 운동 강도는 약 ${(intensityPercent * 100).toFixed(1)}%이며, Runner's High Score가 가장 높은 시점은 운동 시작 후 약 ${bestTime}분입니다.`;
   document.getElementById("interpretation").textContent =
     "이 결과는 실제 호르몬 측정값이 아니라, 운동 시간과 강도에 따른 러너스 하이 관련 호르몬 변화 가설을 시각화한 시뮬레이션입니다. 따라서 러너스 하이를 증명하는 자료가 아니라, 정서 및 인지 변화와 비교하기 위한 예측 모델로 해석해야 합니다.";
 
