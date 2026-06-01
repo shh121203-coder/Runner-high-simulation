@@ -2,10 +2,13 @@ let chart = null;
 
 const durationInput = document.getElementById("duration");
 const durationValue = document.getElementById("durationValue");
+const runButton = document.getElementById("runButton");
 
 durationInput.addEventListener("input", () => {
   durationValue.textContent = durationInput.value;
 });
+
+runButton.addEventListener("click", runSimulation);
 
 function gaussian(x, center, width, height) {
   return height * Math.exp(-Math.pow(x - center, 2) / (2 * Math.pow(width, 2)));
