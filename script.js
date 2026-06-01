@@ -13,7 +13,15 @@ function gaussian(x, center, width, height) {
 
 function runSimulation() {
   const duration = Number(document.getElementById("duration").value);
-  const intensity = Number(document.getElementById("intensity").value);
+  const age = Number(document.getElementById("age").value);
+  const restingHR = Number(document.getElementById("restingHR").value);
+  const exerciseHR = Number(document.getElementById("exerciseHR").value);
+
+  const maxHR = 220 - age;
+  const heartRateReserve = maxHR - restingHR;
+  const intensityPercent = (exerciseHR - restingHR) / heartRateReserve;
+
+  const intensity = Math.max(0.5, Math.min(1.5, intensityPercent * 1.5));
 
   const time = [];
   const endorphin = [];
