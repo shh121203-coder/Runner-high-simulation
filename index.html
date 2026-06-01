@@ -10,25 +10,23 @@
 <body>
   <main class="container">
     <h1>Runner's High Hormone Simulator</h1>
-    <p class="subtitle">
-      러너스 하이 관련 호르몬 변화를 직접 측정하지 않고 시뮬레이션하는 연구 도구
-    </p>
+    <p class="subtitle">심박수 기반 러너스 하이 호르몬 변화 시뮬레이터</p>
 
     <section class="card">
-  <label>나이</label>
-  <input type="number" id="age" value="17" min="10" max="80" />
+      <label>나이</label>
+      <input type="number" id="age" value="17" min="10" max="80" />
 
-  <label>안정 시 심박수(bpm)</label>
-  <input type="number" id="restingHR" value="70" min="40" max="120" />
+      <label>안정 시 심박수(bpm)</label>
+      <input type="number" id="restingHR" value="70" min="40" max="120" />
 
-  <label>운동 중 평균 심박수(bpm)</label>
-  <input type="number" id="exerciseHR" value="145" min="80" max="220" />
+      <label>운동 중 평균 심박수(bpm)</label>
+      <input type="number" id="exerciseHR" value="145" min="80" max="220" />
 
-  <label>운동 시간: <span id="durationValue">30</span>분</label>
-  <input type="range" id="duration" min="10" max="60" value="30" />
+      <label>운동 시간: <span id="durationValue">30</span>분</label>
+      <input type="range" id="duration" min="10" max="60" value="30" />
 
-  <button onclick="runSimulation()">시뮬레이션 실행</button>
-</section>
+      <button id="runButton">시뮬레이션 실행</button>
+    </section>
 
     <section class="card">
       <canvas id="hormoneChart"></canvas>
